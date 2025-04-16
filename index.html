@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Minjun Kim</title>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/x-icon" href="img/snu_ui.png">
+    <meta name="viewport" content="width=1440, initial-scale=1.25">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NCDDS4RZ2X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-NCDDS4RZ2X');
+    </script>
+    <!-- End Google Tag Manager -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Prata&family=Prociono&family=Quintessential&display=swap"
+    rel="stylesheet">    
+    <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Prata&family=Prociono&family=Quintessential&display=swap"
+    rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 16px;
+            color: #333;
+            min-width: 1200px;
+            overflow: auto;
+        }
+        
+        #content {
+            height: fit-content;
+            width: 80%;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        h3 {
+            margin-top: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: royalblue;  
+        }
+
+        #alert {
+            color: #f00;
+            background-color: beige;
+            padding: 10px;
+            border-radius: 10px;
+            margin: 0px;
+        }
+
+        .middle-blank {
+            position: relative;
+            display: block;
+            padding: 15px 15px;
+        }
+
+        footer{
+            margin-bottom: 15px;
+        }
+
+        .news_date{
+            font-weight: 600;
+            padding: 5px;
+        }
+
+        .me {
+            font-weight: 600;
+            text-decoration: underline;
+            font-style: italic;
+        }
+
+        .pub_counter {
+            font-weight: 600;
+            font-size: 18px;
+            padding-right: 3px;
+        }
+
+        .pub_title {
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .authors {
+            font-size: 16px;
+            font-weight: 400;
+            font-style: italic;
+            margin-top: 2px;
+            margin-bottom: 3px;
+        }
+
+        .small_note {
+            font-size: 16px;
+            font-weight: 400;
+            font-style: italic;
+            color: #777;
+        }
+
+        .pub_venue_short {
+            font-size: 16px;
+            font-weight: 600;
+            color: royalblue;
+        }
+
+        .pub_links {
+            font-size: 16px;
+            font-weight: 500;    
+        }
+
+        .pub_link {
+            color: royalblue;
+        }
+
+        .pub_venue_info {
+            margin: 0px;
+            font-size: 14px;
+            font-weight: 400;
+            font-style: italic;
+            color: #777;
+        }
+
+        .pub_remark {
+            font-size: 16px;
+            font-weight: 600;
+            color: orangered;
+        }
+        
+
+        .project_title {
+            font-size: 16px;
+            font-weight: 400;
+            font-style: italic;
+        }
+
+        .project_content {
+            font-size: 14px;
+            font-weight: 400;
+            color: #777;
+        }
+
+        .award_detail {
+            font-size: 14px;
+            font-weight: 400;
+            color: #777;
+            font-style: italic;
+        }
+
+        .reviewer_venue {
+            font-size: 16px;
+            font-weight: 400;
+            color: #333;
+        }
+
+        @media (max-width: 991px) {
+            body {
+                zoom: 3;
+            }
+        }        
+    </style>
+    <script>
+        function openBibTex(url) {
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    const newWindow = window.open();
+                    newWindow.document.open();
+                    newWindow.document.write('<pre>' + data + '</pre>');
+                    newWindow.document.close();
+                })
+                .catch(error => console.error('Error while loading:', error));
+        }
+    </script>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <a href= "/"><h3 style="color: azure; vertical-align: middle;">Minjun Kim</h3></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="nav-buttons">
+                <ul class="nav navbar-nav">
+                    <li><div class="middle-blank"> &nbsp; &nbsp;</div></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#contacts">Contacts</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#publication">Publications</a></li>
+                    <li><a href="#awards">Awards</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="./src/cv.pdf">CV</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container" id="content">
+        <!-- <div class="row"> -->
+            <!-- Contact Info on the Sidebar -->
+            <div class="col-md-3" style="padding: 0.5%;">
+                <div>
+                    <img id="profile_image" class="img-responsive" style="width: 60%; margin: auto;" src="img/profile.jpeg" alt=""><br>
+                </div>
+                <div style="text-align:center; font-size: 18px; font-weight: 500; ">
+                    <div style="font-family: 'Merriweather', serif; font-size: 32px; font-weight: 700; font-style: italic; margin-bottom: 10px;"><b>Minjun Kim</b></div>
+                    <p> M.S./Ph.D. Student <br>
+                        <a href="https://datalab.snu.ac.kr/">Data Mining Lab, </a><br>
+                        <a href="https://cse.snu.ac.kr/"> Dept. of CSE, </a><br>
+                        Seoul National University<br>
+                        Seoul, South Korea<br>
+                    </p>
+                </div>
+            </div>
+            
+            <div id="margin_col" class="col-md-1" style="height: 100vh; width: 3%"></div>
+            
+            <!-- Entries Column -->
+            <div class="col-md-8">
+
+                <!-- About Me -->
+                <div style="text-align:justify;">
+                    <h2 id="about">About Me</h2>
+                    <p>I am a second-year M.S./Ph.D. student majoring in <a href="https://cse.snu.ac.kr/en">Computer Science and Engineering</a> at <a href="https://en.snu.ac.kr/">Seoul National University</a>, advised by <a href="https://datalab.snu.ac.kr/~ukang/">Prof. U Kang</a>. I received my B.S. in <a href="https://cs.kaist.ac.kr/">Computer Science</a> from <a href="https://www.kaist.ac.kr/en/">KAIST</a>.</p>
+                    <p>My research engages deeply with data mining and machine learning, specializing in the study of graph neural networks and model compression.</p>
+                </div>
+
+                <!-- Contact Info -->
+                <div style="text-align:justify;">
+                    <h2 id="contacts">Contact Info.</h2>
+                    <ul>
+                        <li>
+                            <strong>Email : </strong> <strong>minjun.kim [at] snu.ac.kr</strong> <a href="mailto:minjun.kim@snu.ac.kr">(Preferred)</a>
+                        </li>
+                        <li>
+                            <strong>Address : </strong> 6th Floor, Bldg. 303, 1 Gwanak-ro, Gwanak-gu, Seoul, South Korea
+                        </li>
+                        <li>
+                            <strong>External Links : </strong> [
+                            <a href="https://minjunkim.me/">Homepage</a>
+                            | <a href="https://scholar.google.com/citations?&user=GdqrOD0AAAAJ">Google Scholar</a> 
+                            <!-- | <a href="#">DBLP</a>  -->
+                            | <a href="https://www.linkedin.com/in/mjatwk/">LinkedIn</a> 
+                            | <a href="https://github.com/mjatwk">Github</a>
+                            | <a href="https://orcid.org/0009-0007-1119-5615">ORCID</a> 
+                            | <a href="https://bit.ly/minjunkim_calendar">Calendar</a> 
+                            <!-- | <a href="https://snu-ac-kr.zoom.us/my/minjun.kim">Zoom</a>  -->
+                            | <a href="./src/cv.pdf">CV (pdf) </a> 
+                            <!-- | <a href="https://drive.google.com/file/d/1c9zMjQfu05yYiQwOFjBFriGLU2oAn1QQ/view">CV (Outdated)</a> -->
+                            ]
+                        </li>
+                    </ul>
+
+                    <!-- <p id="alert">⚠️ <strong>Website currently under construction; Please contact me via email for further information. 
+                        <br> &nbsp; &nbsp; &nbsp; Sorry for the inconvenience.</strong></p> -->
+                </div>
+
+                <!-- News -->
+                <!-- <div style="text-align:justify;">
+                    <h2 id="news"> News </h2>
+                    <ul>
+                        <li>
+                            <span class="news_date">[Feb. 2025]</span> 
+                            <span class="news_content">Our work on graph classification has been accepted to <a href="https://pakdd2025.org/">PAKDD 2025</a> (see <a href="#c2">[C2]</a>). </span>
+                        </li>
+                        <li>
+                            <span class="news_date">[Jan. 2025]</span> 
+                            <span class="news_content">Our work on zero-shot quantization has been accepted to <a href="https://iclr.cc/Conferences/2025">ICLR 2025</a> (see <a href="#c1">[C1]</a>). </span>
+                        </li>
+                    </ul>
+                </div> -->
+
+                <!-- Research Interests -->
+                <!-- <div>
+                    <h2 id="interest">Research Intersts</h2>
+                    <ul>
+                        <li>
+                            <strong>Keywords</strong> Desc.<br/>
+                        </li>
+                        <li>
+                            <strong>Keywords</strong> Desc.<br/>
+                        </li>
+                    </ul>
+                    <br/>
+                </div> -->
+
+                <!-- Education -->
+                <div>
+                    <h2 id="education">Education</h2>
+                    <ul>
+                        <li>
+                            <strong>Seoul National University</strong> (Mar. 2024 - Current)<br/>
+                            M.S./Ph.D. Student in <a href="https://cse.snu.ac.kr/en">Computer Science and Engineering</a> <br/>
+                            Advisor: <a href="https://datalab.snu.ac.kr/~ukang">Prof. U Kang</a>
+                        </li>
+                        <br/>
+                        <li>
+                            <strong>KAIST</strong> (Feb. 2019 - Feb. 2024)<br />
+                            B.S. in <a href="https://cs.kaist.ac.kr/">Computer Science</a> <br/>
+                            (Double Major: <a href="https://btm.kaist.ac.kr/">Business and Technology Management</a>)
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Publications -->
+                <div>
+                    <h2 id="publication">Publications</h2>
+                    <div class="small_note">* Equal Contribution, &#8224; Corresponding Author</div>
+
+                    <h3 id="conferences">Conference Papers</h3>
+                    <ul>
+                        <li>
+                            <span class="pub_counter" id="c2">[C2]</span>
+                            <span class="pub_title">AugWard: Augmentation-Aware Representation Learning for Accurate Graph Classification</span><br/>
+                            <div class="authors">
+                                <span class="me">Minjun Kim</span>, Jaehyeon Choi, SeungJoo Lee, Jinhong Jung<sup>&#8224;</sup>, and U Kang<sup>&#8224;</sup>
+                            </div>
+                            <a class="pub_venue_short" href="https://pakdd2025.org/">PAKDD 2025</a>
+                            <span class="pub_venue_info">(The 29th Pacific-Asia Conference on Knowledge Discovery and Data Mining), Sydney, Australia</span>
+                            <div class="pub_remark">Oral Presentation</div>
+                            <div class="pub_links"> [
+                                <a class="pub_link" href="./src/papers/AugWard.pdf">Paper</a>
+                                <!-- | <a class="pub_link" href="/">Poster (TBD)</a> -->
+                                | <a class="pub_link" href="https://arxiv.org/abs/2503.21105">arXiv</a>
+                                | <a class="pub_link" href="https://github.com/snudatalab/AugWard">Code</a>
+                                | <a class="pub_link" href="#" onclick="openBibTex('./src/papers/AugWard.bib')">BibTeX</a>                                
+                                ]
+                            </div>
+                        </li>
+                        <br/>
+                        <li>
+                            <span class="pub_counter" id="c1">[C1]</span>
+                            <span class="pub_title">SynQ: Accurate Zero-shot Quantization by Synthesis-aware Fine-tuning</span><br/>
+                            <div class="authors">
+                                <span class="me">Minjun Kim</span>, Jongjin Kim, and U Kang<sup>&#8224;</sup>
+                            </div>
+                            <a class="pub_venue_short" href="https://iclr.cc/Conferences/2025">ICLR 2025</a>
+                            <span class="pub_venue_info">(The Thirteenth International Conference on Learning Representations), Singapore</span>
+                            <div class="pub_links"> [
+                                <a class="pub_link" href="./src/papers/SynQ.pdf">Paper</a>
+                                | <a class="pub_link" href="https://openreview.net/forum?id=2rnOgyFQgb">OpenReview</a>
+                                | <a class="pub_link" href="https://iclr.cc/virtual/2025/poster/31109">Poster</a>
+                                | <a class="pub_link" href="/">arXiv (TBD)</a>
+                                | <a class="pub_link" href="https://github.com/snudm-starlab/SynQ">Code</a>
+                                | <a class="pub_link" href="#" onclick="openBibTex('./src/papers/SynQ.bib')">BibTeX</a>                                
+                                ]
+                            </div>
+                        </li>
+                    </ul>
+                    
+                    <!-- Patents -->
+                    <h3 id="patent">Patents</h3>
+                    <ul>
+                        <li>
+                            <strong>Graph Classification Method and Apparatus based on Augmentation-Aware Representation Learning </strong>
+                            <div class="authors">
+                                <span class="me">Minjun Kim</span>, Jaehyeon Choi, SeungJoo Lee, Jinhong Jung, and U Kang
+                            </div>
+                            <div class="patent_info">Filed 30th Oct., 2024</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Awards and Honors -->
+                <div>
+                    <h2 id="awards">Awards and Honors</h2>
+                    <ul>    
+                        <li>
+                            <strong class="award_title">
+                                <a href="https://pakdd2025.org/award/travelgrant/">PAKDD Student Travel Award</a>
+                            </strong> 
+                            <span class="award_detail">for attending PAKDD 2025</span> (Mar. 2025)<br/>
+                        </li>
+                        <li>
+                            <strong class="award_title">Youlchon AI Research Fellowship</strong> (Sep. 2024)<br/>
+                        </li>
+                        <!-- <br/> -->
+                    </ul>
+                </div>
+
+                <!-- Projects -->
+                <div>
+                    <h2 id="projects">Projects</h2>
+                    <ul>
+                        <li>
+                            <strong>AI Platform @ <a href="https://www.samsung.com/">Samsung Electronics</a></strong> (May. 2024 - Current)<br/>
+                            <div class="project_title">"Mixed Precision Quantization of Large Language Models for On-Device Execution"</div>
+                            <div class="project_content">Mixed Precision Quantization of LLMs and MLLMs</div>
+                        </li>
+                        <br/>
+                        <li>
+                            <strong><a href="http://swstarlab.kr/">SW-StarLab @ IITP</a></strong> (Jun. 2023 - Current)<br/>
+                            <div class="project_title">"Model Compression for Deep Neural Networks"</div>
+                            <div class="project_content">Few-shot and Zero-shot Quantization of Vision Task Models</div>
+                        </li>
+                        <br/>
+                        <li>
+                            <strong> AI Research Project @ <a href="http://www.youlchon.org/">Youlchon Foundation</a></strong> (Jun. 2023 - Current)<br/>
+                            <div class="project_title">"Advancing Language Models Through Compression of Large Language Models"</div>
+                            <div class="project_content">Model Compression of LLMs</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Academic Services -->
+                <div>
+                    <h2 id="academic">Academic Services</h2>
+                    <h3> Reviewer </h3>
+                    <ul>
+                        <li><span class="reviewer_venue">IJCAI 2025</span></li>
+                    </ul>
+                    <h3> Teaching Assistant </h3>
+                    <ul>
+                        <li>
+                            <a href="https://datalab.snu.ac.kr/~ukang/courses/25S-DS/">Data Structure (M1522.000900)</a> @ Seoul National University (Spring 2025)<br/>
+                        </li>
+                        <li>
+                            <a href="https://datalab.snu.ac.kr/~ukang/courses/24F-DM/">Data Mining (M1522.001400)</a> @ Seoul National University (Fall 2024)<br/>
+                        </li>
+                        <li>
+                            Machine Learning Course @ HD Hyundai Heavy Industries (Summer 2024)<br/>
+                        </li>
+                        <li>
+                            Advanced Data Scientists Course @ LG Electronics (Winter 2024)<br/>
+                        </li>
+                        <li>
+                            AI Boosting Camp @ Hyundai Motor Group (Fall 2023, Spring 2024)<br/>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        <!-- </div> -->
+    </div>
+    <!-- /.container -->
+    <div class="container">
+        <hr>
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12" style="display: flex; justify-content: space-between;">
+                    <div style="width:50%;">© 2023-2025 Minjun Kim. All rights reserved.</div>
+                    <div style="width:50%; text-align:end;">Last update: 28th Mar., 2025</div>
+                </div>
+            </div>
+        </footer>
+</body>
+
+</html>
